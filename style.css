@@ -305,7 +305,7 @@ nav a {
     margin-bottom: 15px;
 }
 
-.card span {
+.card span:not(.emoji) {
     background-color: rgba(255, 191, 0, 0.1);
     color: #FFBF00;
     padding: 4px 8px;
@@ -329,6 +329,29 @@ html {
         height: auto;
     }
 }
+
+.code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.code1 {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.emoji {
+    font-size: 20px;
+}
+
+
+.code1:hover {
+    color: rgb(42, 225, 45);
+}
+
 
 @media screen and (max-width:750px) {
     .project-container{
