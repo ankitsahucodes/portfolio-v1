@@ -9,16 +9,17 @@ body {
     font-family: sans-serif;
     color: #a0a0a0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .main-container {
     display: grid;
     max-width: 1200px;
+    width: 100%;
     grid-template-columns: 350px 1fr;
     gap: 40px;
     padding-top: 40px;
     margin: auto;
-    
 }
 
 .sidebar {
@@ -32,14 +33,13 @@ body {
 }
 
 .main-content {
-   
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
     border-radius: 16px;
     padding: 40px;
 }
-/* Profile Pic */
 
+/* Profile Pic */
 .profile {
     text-align: center;
 }
@@ -69,8 +69,23 @@ body {
     margin-top: 10px;
 }
 
+
+
+.resume-btn {
+    text-decoration: none;
+    color: #FFBF00;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.resume-btn:hover {
+    color: #fff;
+    transform: scale(1.05);
+    text-shadow: 0px 0px 8px rgba(255, 191, 0, 0.8);
+}
+
 /* Contact Info */
-.contact{
+.contact {
     margin-top: 30px;
     border-top: 2px solid #3a3a3a;
     padding-top: 20px;
@@ -88,11 +103,12 @@ body {
 }
 
 .email, .phone {
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
-/* social info */
 
+
+/* Social Info */
 .social {
     margin-top: 30px;
     border-top: 2px solid #3a3a3a;
@@ -100,24 +116,20 @@ body {
     text-align: center;
 }
 
-
 .social img {
     height: 24px;
     width: 24px;
     margin: 5px;
     filter: grayscale(1) invert(0.7);
-    transition: filter 0.3 ease;
+    transition: filter 0.3s ease;
 }
 
 .social img:hover {
     filter: grayscale(0) invert(0);
-
 }
 
-/* navigation */
-
+/* Navigation */
 #navigation {
-
     border-bottom: 2px solid #3a3a3a;
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -134,15 +146,13 @@ nav a {
     color: #a0a0a0;
     font-weight: 500;
     transition: color 0.3s ease;
-    
 }
 
 .active, nav a:hover {
     color: #FFBF00;
 }
 
-/* about me */
-
+/* About Me */
 #about {
     margin-bottom: 40px;
 }
@@ -165,11 +175,10 @@ nav a {
     color: #a0a0a0;
 }
 
-/* skills */
-
+/* Skills */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 33px;
 }
 
@@ -180,7 +189,7 @@ nav a {
     background-color: #1e1e1e;
     text-align: center;
     margin-top: 20px;
-    transition:  transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item img {
@@ -195,15 +204,12 @@ nav a {
     font-weight: 500;
 }
 
-
 .item:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 5px #eeff004d;
 }
 
-
 /* Education */
-
 #education {
     margin-top: 30px;
 }
@@ -263,7 +269,6 @@ nav a {
 }
 
 /* Projects */
-
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -271,7 +276,7 @@ nav a {
     margin-top: 30px;
 }
 
-.projects img{
+.projects img {
     height: 180px;
     width: 100%;
     object-fit: cover;
@@ -294,7 +299,7 @@ nav a {
     padding: 20px;
 }
 
-.card h3{
+.card h3 {
     color: #e0e0e0;
     margin-bottom: 10px;
 }
@@ -314,22 +319,6 @@ nav a {
     margin-right: 5px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-@media screen and (max-width:1200px) {
-    .main-container{
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .sidebar{
-        position: static;
-        height: auto;
-    }
-}
-
 .code {
     display: flex;
     justify-content: space-between;
@@ -347,44 +336,56 @@ html {
     font-size: 20px;
 }
 
-
 .code1:hover {
     color: rgb(42, 225, 45);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-@media screen and (max-width:750px) {
-    .project-container{
+/* Tablet View */
+@media screen and (max-width: 1200px) {
+    .main-container {
         grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
     }
 
-    #navigation nav {
-        /* Adjust nav for smaller screens */
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .sidebar{
-        display: flex;
-        justify-content: center;
-        gap: 40px;
+    .sidebar {
+        position: static;
+        height: auto;
     }
 }
 
-@media screen and (max-width:410px) {
-    .project-container{
-        grid-template-columns: 1fr;
+/* Mobile View */
+@media screen and (max-width: 750px) {
+    .main-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .sidebar {
+        padding: 25px;
+    }
+
+    .main-content {
+        padding: 25px;
     }
 
     #navigation nav {
-        /* Adjust nav for smaller screens */
         justify-content: center;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
-    .sidebar{
-        display: flex;
-        justify-content: center;
-        gap: 40px;
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
     }
 }
+
