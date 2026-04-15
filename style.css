@@ -313,7 +313,7 @@ nav a {
 .card span:not(.emoji) {
     background-color: rgba(255, 191, 0, 0.1);
     color: #FFBF00;
-    padding: 4px 8px;
+    padding: 4px 5px;
     border-radius: 5px;
     font-size: 0.75rem;
     margin-right: 5px;
